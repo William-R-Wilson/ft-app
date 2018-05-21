@@ -1,0 +1,21 @@
+user:
+  has workouts
+  has goals
+  has measurements
+
+
+
+workouts
+  date
+  workout_exercises
+
+
+workout_exercises
+  has exercises
+  field: reps
+  field: sets
+  field: weight
+  field: duration
+
+exercise
+  field: name 

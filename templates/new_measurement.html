@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="well">
+  <h2>Enter Today's Measurements</h2>
+  <p>Enter your measurements so you can track progress.  Don't worry, no one else will see this(unless you want them to!)</p>
+  <form action="{{ url_for('add_measurement') }}" method="POST">
+    <label>Height</label>
+    <input type="number" placeholder="feet" name = "height_ft" required>
+    <input type="number" placeholder="inches" name= "height_inches" required>
+    <label>Weight</label>
+    <input type="number" name = "weight" step=".1" placeholder="weight in pounds" required>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{%endblock%}
